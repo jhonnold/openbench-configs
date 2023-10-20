@@ -23,6 +23,12 @@
     ],
     "private": false
   },
+  "tunemodes": {
+    "STC": {
+      "options": "Threads=1 Hash=8",
+      "timecontrol": "10.0+0.10"
+    }
+  },
   "testmodes": {
     "STC": {
       "options": "Threads=1 Hash=8",
