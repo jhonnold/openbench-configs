@@ -1,0 +1,80 @@
+{
+  "private": false,
+  "nps": 785000,
+  "base": "main",
+  "source": "https://github.com/jhonnold/berserk",
+  "bounds": "[0.00, 2.00]",
+  "book": "UHO_4060_v2.epd",
+  "win_adj": "movecount=4 score=300",
+  "draw_adj": "movenumber=32 movecount=6 score=6",
+  "build": {
+    "path": "src",
+    "compilers": [
+      "gcc"
+    ],
+    "cpuflags": [
+      "AVX2",
+      "FMA",
+      "POPCNT"
+    ],
+    "systems": [
+      "Windows",
+      "Linux"
+    ],
+    "private": false
+  },
+  "testmodes": {
+    "STC": {
+      "options": "Threads=1 Hash=8",
+      "timecontrol": "10.0+0.1",
+      "report_rate": 16,
+      "workload_size": 32
+    },
+    "LTC": {
+      "options": "Threads=1 Hash=64",
+      "timecontrol": "60.0+0.6",
+      "report_rate": 4,
+      "workload_size": 8
+    },
+    "STC Simplify": {
+      "options": "Threads=1 Hash=8",
+      "timecontrol": "10.0+0.1",
+      "report_rate": 16,
+      "workload_size": 32,
+      "bounds": "[-2.00, 0.00]"
+    },
+    "LTC Simplify": {
+      "options": "Threads=1 Hash=64",
+      "timecontrol": "60.0+0.6",
+      "report_rate": 4,
+      "workload_size": 8,
+      "bounds": "[-2.00, 0.00]"
+    },
+    "STC Fixed": {
+      "options": "Threads=1 Hash=8",
+      "timecontrol": "10.0+0.1",
+      "report_rate": 16,
+      "workload_size": 32,
+      "games": 20000
+    },
+    "LTC Fixed": {
+      "options": "Threads=1 Hash=64",
+      "timecontrol": "60.0+0.6",
+      "report_rate": 4,
+      "workload_size": 8,
+      "games": 20000
+    },
+    "SMP STC": {
+      "options": "Threads=8 Hash=64",
+      "timecontrol": "5.0+0.05",
+      "report_rate": 1,
+      "workload_size": 64
+    },
+    "SMP LTC": {
+      "options": "Threads=8 Hash=256",
+      "timecontrol": "30.0+0.30",
+      "report_rate": 1,
+      "workload_size": 16
+    }
+  }
+}
